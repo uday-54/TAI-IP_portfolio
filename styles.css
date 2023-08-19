@@ -1,0 +1,992 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* homepage starts */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(6, 6, 51);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    box-shadow: 0 2px 8px rgba(224, 213, 213, 0.822);
+    /* Optional: Add a shadow for better visibility */
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+
+    color: rgb(158, 158, 180);
+    font-size: 1.01rem;
+}
+
+.left {
+    font-size: 2rem;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: white;
+    transition-delay: 0.3ms;
+}
+
+.no-underline:hover {
+
+    color: rgb(158, 158, 180);
+    transform: scale3d(1.5);
+}
+
+.right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0.1;
+    position: none;
+}
+
+.right {
+    justify-content: right;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    header nav .left {
+
+        justify-content: center;
+    }
+
+
+
+    .burger-menu {
+        flex: 0.1;
+        padding-left: 2%;
+    }
+
+    .burger-menu:hover {
+        cursor: pointer;
+    }
+
+    .line-1,
+    .line-2,
+    .line-3 {
+        width: 25px;
+        height: 3px;
+        background-color: #f5f5f5;
+        margin: 5px;
+    }
+
+    .burger-menu-dropdown {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 90%;
+        margin: auto;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* RGB of black */
+    }
+
+    .burger-menu-dropdown li {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .burger-menu-dropdown li:hover {
+        color: #69f0ae;
+        background-color: rgba(66, 66, 66, 0.3);
+        border-radius: 8px;
+    }
+
+    .hide-burger-menu {
+        display: none;
+    }
+}
+
+
+
+.social-icons {
+    margin: 20% 0px 0px 30%;
+    display: flex;
+    gap: 20%;
+    font-size: 40px;
+    color: #ccd3d7;
+    transition-delay: 0.3s;
+
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #afacf0a9;
+    transform: scale(1.2);
+
+}
+
+
+
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0;
+}
+
+.firstsection>div {
+    width: 30%;
+}
+
+.leftsection {
+    margin: 30px;
+    font-size: 3rem;
+
+}
+
+.rightsection {
+    background-color: rgb(6, 6, 51);
+}
+
+
+.rightsection img {
+    width: 90%;
+    margin: 50px 0;
+
+}
+
+.purple {
+    color: rgb(169, 100, 169);
+}
+
+#element {
+    color: rgb(169, 100, 169);
+}
+
+@media (max-width: 768px) {
+    .firstsection {
+        flex-direction: column;
+        /* Stack items vertically for mobile */
+        align-items: center;
+        /* Center-align items */
+        margin: 40px 0;
+        /* Adjust margin for mobile */
+    }
+
+    .firstsection>div {
+        width: 80%;
+        /* Make the divs take up more width on mobile */
+        margin: 20px 0;
+        /* Adjust margin for mobile */
+    }
+
+    .leftsection {
+        margin: 20px;
+        font-size: 2rem;
+        /* Adjust font size for mobile */
+    }
+
+    .rightsection img {
+        width: 100%;
+        /* Make the image take full width on mobile */
+        margin: 30px 0;
+        /* Adjust margin for mobile */
+        border-radius: 50%;
+    }
+}
+
+
+
+
+
+
+
+hr {
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+#about {
+    margin: 2% 5% 10% 5%;
+    padding: 8% 0% 5% 5%;
+    height: 500px;
+    background-color: rgb(0, 0, 32);
+
+
+}
+
+#about h1 {
+    margin-top: 5px;
+}
+
+#about ul li {
+    margin: 10px auto;
+
+}
+
+
+
+
+
+#about>.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: max-content;
+    margin: 5% auto;
+    padding: 5% auto;
+    font-size: large;
+    background-color: rgb(6, 6, 51);
+}
+
+@media (max-width: 768px) {
+    #about {
+        margin: 2% 5%;
+        padding: 8% 0% 5% 5%;
+        /* Use min-height instead of fixed height */
+        background-color: rgb(0, 0, 32);
+        /* Prevent excessive scrolling */
+        max-height: 600px;
+        overflow-y: auto;
+    }
+
+    #about h1 {
+        margin-top: 10px;
+    }
+
+    #about ul li {
+        margin: 5px auto;
+    }
+
+    #about>.container {
+        font-size: small;
+    }
+}
+
+
+
+
+
+
+
+
+/* home page ends */
+
+
+/* education and experience starts */
+
+#eduandexp {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    margin: 5% 5% 5% 5%;
+    padding: 5% 2% 5% 5%;
+}
+
+#body12 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(1, 1, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container1 {
+    width: 100%;
+    padding: 35px 10%;
+    background-color: rgb(6, 6, 51);
+    ;
+}
+
+main.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.col .title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.col .contents {
+    padding: 0 30px;
+    border-left: 2px solid #bababa;
+}
+
+
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: rgb(1, 2, 36);
+    cursor: pointer;
+    transform: all 0.4s;
+    margin-bottom: 20px;
+}
+
+
+
+.col .contents .box:hover {
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+    transform: scale(1.05);
+}
+
+
+.col .contents .box::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top: 0;
+    background-color: #ced5d3;
+    border: 2px solid white;
+}
+
+.box h4 {
+
+    position: relative;
+    color: azure;
+}
+
+.box h3 {
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c0c0cd;
+}
+
+.box p {
+    line-height: 1.2;
+    color: aliceblue;
+    font-size: 17px;
+
+}
+
+
+@media (max-width:768px) {
+    main.row {
+        grid-template-columns: 1fr;
+    }
+
+    .row .col:nth-child(2) {
+        margin-top: 30px;
+    }
+
+    .col .title {
+        font-size: 24px;
+    }
+
+    .col .contents .box h3 {
+        font-size: 16px;
+    }
+
+    .box p {
+        font-size: 14px;
+
+    }
+}
+
+
+
+/* eduaction and experience ends */
+
+
+/* skill and languages known starts */
+
+#skillandlang {
+    margin: 2% auto;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+#skill h1 {
+    text-align: center;
+}
+
+#skill h3 {
+    margin: 5px;
+}
+
+#skill {
+    height: 590px;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(6, 6, 50);
+
+}
+
+#skill:hover {
+    box-shadow: -1px -14px 28px rgba(156, 153, 153, 0.25), 0 10px 20px rgba(213, 210, 210, 0.22);
+}
+
+#skill li {
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+}
+
+
+.bar {
+    background: #354b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgb(57, 45, 227) 0%, rgb(240, 245, 245)100%);
+}
+
+.html {
+    width: 90%;
+    animation: html 1s;
+}
+
+.css {
+    width: 80%;
+    animation: html 1s;
+}
+
+.js {
+    width: 50%;
+    animation: html 1s;
+}
+
+.c {
+    width: 80%;
+    animation: html 1s;
+}
+
+.python {
+    width: 80%;
+    animation: html 1s;
+}
+
+
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    90% {
+        width: 90%
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 80%
+    }
+}
+
+@keyframes js {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%
+    }
+}
+
+@keyframes c {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 80%
+    }
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 80%
+    }
+}
+
+
+
+#language h1 {
+    text-align: center;
+}
+
+#language h3 {
+    margin: 5px;
+}
+
+#language {
+    height: 590px;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+
+    background-color: rgb(6, 6, 50);
+
+}
+
+#language:hover {
+    box-shadow: -1px -14px 28px rgba(156, 153, 153, 0.25), 0 10px 20px rgba(213, 210, 210, 0.22);
+}
+
+#language li {
+    margin: 20px 0;
+    padding: 10px;
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    #skillandlang {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        offset: auto;
+    }
+
+    #skill,
+    #language {
+        width: 70%;
+    }
+
+    .skill-li,
+    .lang-li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+
+
+
+    h1,
+    h3,
+    h5 {
+        font-size: 18px;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    #skillandlang {
+     
+
+    }
+
+    
+} */
+
+
+/* skills and language ends */
+
+
+/* acheivement and interest starts */
+
+
+#achieveandinterest {
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+
+#achieveandinterest h1 {
+    text-align: center;
+}
+
+#achieveandinterest h3 {
+    margin: 0px;
+}
+
+.Acheivement {
+    height: 180px;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(6, 6, 50);
+
+}
+
+.Acheivement li {
+    margin: 20px 0;
+    padding: 5px;
+    list-style: none;
+}
+
+
+
+.interest {
+    height: 180px;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(6, 6, 50);
+
+}
+
+.interest li {
+    margin: 1px auto;
+    padding: 5.5px;
+    list-style: none;
+}
+
+.Acheivement:hover,
+.interest:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 28px rgba(97, 95, 95, 0.25), 0 10px 20px rgba(110, 111, 124, 0.22);
+
+}
+
+@media screen and (max-width: 768px) {
+    #achieveandinterest {
+        flex-direction: row;
+        /* Arrange elements vertically for mobile */
+        margin: 20px;
+        /* Adjust margin for better spacing */
+        padding: 10px;
+        /* Adjust padding for better spacing */
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .Acheivement,
+    .interest {
+        width: 70%;
+        /* Take full width of the screen */
+        margin: 20px auto;
+        /* Center align the divs */
+        height: 325px;
+        border: 1px solid #ccc;
+        /* Add a 1px solid border */
+        box-sizing: border-box;
+        transition: all 0.3s;
+    }
+
+    .Acheivement:hover,
+    .interest:hover {
+        transform: scale(1.05);
+        box-shadow: 0 14px 28px rgba(206, 203, 203, 0.25), 0 10px 20px rgba(166, 127, 127, 0.22);
+    }
+
+    /* Scroll to section on click */
+    .Acheivement,
+    .interest {
+        cursor: pointer;
+    }
+
+    .Acheivement:focus,
+    .interest:focus {
+        scroll-margin-top: 10%;
+        /* Adjust this value as needed */
+    }
+}
+
+
+
+/* acheivement and Interest Ends*/
+
+/*Contact form*/
+
+
+
+#contactme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 20px auto;
+
+}
+
+#contactme .title {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1.5% 0;
+}
+
+.title-info {
+    padding-bottom: 2%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 2%;
+    height: fit-content;
+}
+
+.input-group,
+.textarea-group {
+    padding: 1% 0;
+}
+
+input,
+textarea {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding: 1.5%;
+    font-size: 20px;
+}
+
+input:focus,
+textarea:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid #542861;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: transparent;
+}
+
+label {
+    color: #757575;
+    position: relative;
+    left: 0.5em;
+    top: -2em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: -4em;
+    color: #542861;
+    font-size: 15px;
+}
+
+textarea:focus~label,
+textarea:not(:placeholder-shown)~label {
+    top: -10.5em;
+    color: #542861;
+    font-size: 15px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 2%;
+    width: 50%;
+    border: 1px solid;
+    border-color: #39285e;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: black;
+    color: inherit;
+    box-shadow: 0 0 10px #212121;
+}
+
+button:hover {
+    background-color: #424242;
+    color: #542861;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .title {
+        font-size: 40px;
+        padding-top: 6%;
+    }
+
+    .title-info {
+        font-size: 13px;
+    }
+
+    .form {
+        padding: 6% 4%;
+        padding-top: 15%;
+        height: 110%;
+    }
+
+    .input-group,
+    .textarea-group {
+        padding: 3% 0;
+    }
+
+    input,
+    textarea {
+        font-size: 15px;
+    }
+
+    input:focus~label,
+    input:not(:placeholder-shown)~label {
+        top: -3.5em;
+        left: 0.1em;
+    }
+
+    textarea:focus~label,
+    textarea:not(:placeholder-shown)~label {
+        top: -8.5em;
+        left: 0.2em;
+    }
+
+
+
+    .button-div {
+        text-align: center;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 5% auto;
+        display: inline-block;
+        border: none;
+        background-color: rgb(6, 6, 50);
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+/* footer section */
+
+
+.foot-social-icons-in {
+    margin: 0 2px;
+    gap: 20%;
+    font-size: 40px;
+    color: #ccd3d7;
+    transition-delay: 0.3s;
+}
+
+.foot-social-icons-git {
+    margin: 0 0 0 2px;
+    gap: 20%;
+    font-size: 40px;
+    color: #ccd3d7;
+    transition-delay: 0.3s;
+}
+
+footer .centre {
+    font-size: 2rem;
+}
+
+
+
+.foot-social-icons-git a:hover,
+.foot-social-icons-in a:hover {
+    color: #afacf0a9;
+    transform: scale(1.2);
+
+}
+
+
+
+
+/* Media queries for mobile screens */
+@media (max-width: 768px) {
+
+    #footer{
+        margin-bottom: 10px;
+
+    }
+
+    .centre {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    /* Example of adjusting font size for social icons */
+    .foot-social-icons-git,
+    .foot-social-icons-in {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+}
